@@ -1,10 +1,4 @@
 # FusionNeuralNetwork about Person Re-ID using Pytorch
->My first Project,in Northeastern University,Shenyang.
-Author:liangzia, 2018.
-
-address:[github](https://github.com/liangzid/FusionNeuralNetwork)
-
-**2273067585@qq.com**
 
 Reference codes:[baseline](https://github.com/layumi/Person_reID_baseline_pytorch)
 
@@ -29,10 +23,6 @@ git clone https://github.com/pytorch/vision
 cd vision
 python setup.py install
 ```
-Because pytorch and torchvision are ongoing projects.
-
-My code has been Refined to be OK in new version.
-
 ## Dataset & Preparation
 Download [Market1501 Dataset](http://www.liangzheng.org/Project/project_reid.html)
 
