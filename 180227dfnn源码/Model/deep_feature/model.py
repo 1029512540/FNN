@@ -88,16 +88,6 @@ class fusion_net(nn.Module):
 
         # x = torch.squeeze(x)
         x = x.reshape(batchsize, -1)
-        # print('***************************************************************{}'.format(self.liangzi))
-        # self.liangzi+=1
-
-        #x = torch.squeeze(x)
-        # print('***************************************************************')
-
-        # print(x.shape)
-        # print(type(x))
-        # 融合
-        # print(hand_feature.shape)
 
         x = torch.cat((x, hand_feature), 1)
 
