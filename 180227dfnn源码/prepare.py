@@ -1,9 +1,3 @@
-'''
-从现在开始尝试搞清楚这些代码并在此基础上把自己写的代码成功RUN出来
-'''
-
-
-
 import os
 from shutil import copyfile
 
