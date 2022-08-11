@@ -9,7 +9,7 @@
 =the output:                                                             =
 =Vector --->  Tensor                                                     =
 =                                                                        =
-=liangzia,2018,8,25                                                      =
+=2018,8,25                                                      =
 ==========================================================================
 """
 '''
@@ -20,7 +20,7 @@ please take this python file to the Project directory
 
 reference from: ......
 
-liangzia,2018,5,6 finally
+2018,5,6 finally
 
 warning: make sure python version =3.x, and make sure you have installed numpy,opencv3,cv2(python)
 ********************===================******************
@@ -75,7 +75,7 @@ import cv2
 inverse_nomalize:
 这个实现的功能是反归一化,由于神经网络读取数据时已经对数据进行了归一化的操作,因此需要进行反归一化,这样才能将数据传递给LOMO算法
 本函数只对三维张量(RGB的彩色图像之类)有效
-liangzia,2018,8,19
+2018,8,19
 '''
 def inverse_nomalize(img,mean,variance):
     
@@ -304,7 +304,7 @@ def LOMO_per(img,c_list=[5,20],low_clip=0.1,high_clip=0.9,
     #for pool in range(3):
     row_num=int((img_cp.shape[0]-(blocksize-block_step))/block_step)
     col_num=int((img_cp.shape[1]-(blocksize-block_step))/block_step)
-    #liangzia=0
+    
     for row in range(row_num):
         for col in range(col_num):
             img_block=img_cp[
@@ -328,8 +328,8 @@ def LOMO_per(img,c_list=[5,20],low_clip=0.1,high_clip=0.9,
             img_block_copy=np.array(img_block2,dtype=np.uint8)
             #print(img_block_copy.shape)
             img_hsv=cv2.cvtColor(img_block_copy,cv2.COLOR_BGR2HSV)
-            #print('--------------------------------------{}'.format(liangzia))
-            #liangzia+=1
+   
+           
                 #print(img_hsv.shape)
             hsv_hist=jointHistogram(
                 img_hsv,
@@ -359,15 +359,7 @@ def LOMO_per(img,c_list=[5,20],low_clip=0.1,high_clip=0.9,
     hsv_feat/=np.linalg.norm(hsv_feat)
 
     lomo_per=np.concatenate([siltp_feat,hsv_feat],0)
-    '''
-    print(lomo)
-    liangzi,=lomo.shape
-    papri=0
-    for i in range(liangzi):
-        if lomo[i]==0.0:
-            papri+=1
-    print(papri)
-    '''
+ 
 
     return lomo_per
 
